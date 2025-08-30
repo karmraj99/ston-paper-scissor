@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stone paper scissor</title>
+    <link rel="stylesheet" href="stone paper scissor.css">
+</head>
+<body>
+    <div class="main-box">
+        <div class="box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1oVYODmKtM0KUIk5C4JgfCggvxbkSzvBs-g&s" alt="">
+        <button id="button" class="stone-button" onclick="
+        let stoneNum=Math.random()*3;
+
+        let computerChoice=``;
+            if (stoneNum>0 && stoneNum<=1){
+                computerChoice=`Computer choice stone`
+            }else if (stoneNum>1 && stoneNum<=2){
+                computerChoice=`Computer choice paper`
+            }else {
+                computerChoice=`Computer choice scissor`
+            }
+        let result=``;
+            if (stoneNum>0 && stoneNum<=1){
+                result=`game tie`
+            }else if (stoneNum>1 && stoneNum<=2){
+                result=`computer win`
+            }else{
+                result=`you win`
+            }
+            
+            alert(`you choice stone. ${computerChoice}. ${result}`)
+    ">stone</button>
+    </div>
+
+    <div class="box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQY2xfzFbfiQs8bhE2rqn3oamtx5HnE81KEg&s" alt="">
+        <button id="button" class="paper-button" onclick="
+    let paperNum=Math.random()*3;
+
+        let papercomputerChoice=``;
+            if (paperNum>0 && paperNum<=1){
+                papercomputerChoice=`Computer choice stone`
+            }else if (paperNum>1 && paperNum<=2){
+                papercomputerChoice=`Computer choice paper`
+            }else {
+                papercomputerChoice=`Computer choice scissor`
+            }
+        let paperresult=``;
+            if (paperNum>0 && paperNum<=1){
+                paperresult=`you win`
+            }else if (paperNum>1 && paperNum<=2){
+                paperresult=`game tie`
+            }else{
+                paperresult=`computer win`
+            }
+            
+            alert(`you choice paper. ${papercomputerChoice}. ${paperresult}`)
+    ">paper</button>
+    </div>
+
+    <div class="box">
+        <img src="data:image/jpeg;base64,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" alt="">
+        <button id="button" class="scissor-button" onclick="
+        let scissorNum=Math.random()*3;
+
+        let scissorcomputerChoice=``;
+            if (scissorNum>0 && scissorNum<=1){
+                scissorcomputerChoice=`Computer choice stone`
+            }else if (scissorNum>1 && scissorNum<=2){
+                scissorcomputerChoice=`Computer choice paper`
+            }else {
+                scissorcomputerChoice=`Computer choice scissor`
+            }
+        let scissorresult=``;
+            if (scissorNum>0 && scissorNum<=1){
+                scissorresult=`computer win`
+            }else if (scissorNum>1 && scissorNum<=2){
+                scissorresult=`you win`
+            }else{
+                scissorresult=`game tie`
+            }
+            
+            alert(`you choice scissor. ${scissorcomputerChoice}. ${scissorresult}`)
+            ">scissor</button>
+    </div>
+</div>
+    
+    
+</body>
+</html>
